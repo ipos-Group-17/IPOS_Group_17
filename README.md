@@ -9,12 +9,17 @@ The repository is public to enable enforced governance features (CODEOWNERS and 
 
 ## Repository Structure
 
-/
+
 ├── Team_37_IPOS-SA/   (IPOS-SA: Server / Admin subsystem)
+
 ├── Team_38_IPOS-CA/   (IPOS-CA: Merchant desktop application)
+
 ├── Team_39_IPOS-PU/   (IPOS-PU: Public online portal)
+
 ├── shared/            (Shared schemas, interfaces, documentation)
+
 ├── .github/           (CODEOWNERS and GitHub configuration)
+
 └── README.md
 
 Each subsystem folder is owned by its respective team.
