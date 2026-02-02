@@ -60,6 +60,7 @@ All integration into `main` happens via Pull Requests.
 
 - `.github/`
 - `README.md`
+- `docs/`
 
 Owner:
 - `@DCSSchoolAccount`
