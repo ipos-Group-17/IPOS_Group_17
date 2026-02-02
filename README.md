@@ -16,7 +16,7 @@ The repository is public to enable enforced governance features (CODEOWNERS and 
 
 ├── Team_39_IPOS-PU/   (IPOS-PU: Public online portal)
 
-├── shared/            (Shared schemas, interfaces, documentation)
+├── Shared/            (Shared schemas, interfaces, documentation)
 
 ├── .github/           (CODEOWNERS and GitHub configuration)
 
@@ -79,7 +79,7 @@ This repository uses CODEOWNERS to enforce responsibility.
 
 This applies even if you are an admin or organization owner.
 
-### 5. Shared folder rules (shared/)
+### 5. Shared folder rules (Shared/)
 The shared folder is for:
 - Interface definitions
 - Shared data schemas
