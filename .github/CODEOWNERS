@@ -1,5 +1,22 @@
+# =====================================================
+# Repository governance (maintainer only)
+# =====================================================
+
+/.github/          @DCSSchoolAccount
+/README.md         @DCSSchoolAccount
+
+
+# =====================================================
+# Subsystem ownership
+# =====================================================
+
 /Team_37_IPOS-SA/  @ipos-Group-17/team-37-sa
 /Team_38_IPOS-CA/  @ipos-Group-17/team-38-ca
 /Team_39_IPOS-PU/  @ipos-Group-17/team-39-pu
 
-/Shared/           @ipos-Group-17/team-37-sa  @ipos-Group-17/team-38-ca @ipos-Group-17/team-39-pu
+
+# =====================================================
+# Shared resources (cross-subsystem)
+# =====================================================
+
+/Shared/           @ipos-Group-17/team-37-sa @ipos-Group-17/team-38-ca @ipos-Group-17/team-39-pu
