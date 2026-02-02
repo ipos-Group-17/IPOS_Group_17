@@ -44,6 +44,12 @@ These are the primary working branches for each team.
 
 ---
 
+## Project Governance
+
+Repository governance, ownership boundaries, and review rules are documented in: [Docs/governance.md](Docs/governance.md)
+
+---
+
 ## Rules for Working in This Repository
 
 ### 1. Do not push directly to main
