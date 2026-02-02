@@ -104,34 +104,31 @@ Any change to shared resources requires cross-team review.
 ---
 
 ## Governance Diagram
+```mermaid
+flowchart TD
 
-flowchart TB
-  %% =========================================================
-  %% Branch model
-  %% =========================================================
-  subgraph Branches["Branches"]
-    MAIN["main (protected)\n- PR required\n- approvals required\n- CODEOWNERS review required"]
-    SADEV["team37/sa-dev\n(Team 37 working branch)"]
-    CADEV["team38/ca-dev\n(Team 38 working branch)"]
-    PUDEV["team39/pu-dev\n(Team 39 working branch)"]
-  end
+MAIN["main (protected)"]
+SADEV["team37/sa-dev"]
+CADEV["team38/ca-dev"]
+PUDEV["team39/pu-dev"]
 
-  SADEV -->|PR merge only| MAIN
-  CADEV -->|PR merge only| MAIN
-  PUDEV -->|PR merge only| MAIN
+SADEV -->|"PR only"| MAIN
+CADEV -->|"PR only"| MAIN
+PUDEV -->|"PR only"| MAIN
 
-  %% =========================================================
-  %% Ownership model
-  %% =========================================================
-  subgraph Ownership["CODEOWNERS approval boundaries"]
-    GOV["Governance\n/.github/ and /README.md\nOwner: @DCSSchoolAccount"]
-    SA["/Team_37_IPOS-SA/\nOwner: @ipos-Group-17/team-37-sa"]
-    CA["/Team_38_IPOS-CA/\nOwner: @ipos-Group-17/team-38-ca"]
-    PU["/Team_39_IPOS-PU/\nOwner: @ipos-Group-17/team-39-pu"]
-    SHARED["/shared/\nOwners:\n@ipos-Group-17/team-37-sa\n@ipos-Group-17/team-38-ca\n@ipos-Group-17/team-39-pu"]
-  end
+GOV["Governance\n.github/\nREADME.md\nOwner: DCSSchoolAccount"]
+SA["Team_37_IPOS-SA\nOwner: team-37-sa"]
+CA["Team_38_IPOS-CA\nOwner: team-38-ca"]
+PU["Team_39_IPOS-PU\nOwner: team-39-pu"]
+SHARED["shared\nOwners: all teams"]
 
-  MAIN -.->|Merges gated by relevant owners| Ownership
+MAIN --- GOV
+MAIN --- SA
+MAIN --- CA
+MAIN --- PU
+MAIN --- SHARED
+
+```
 
 
 
