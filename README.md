@@ -1,2 +1,2 @@
-# IPOS-SA_Team_37
-This is the main repo for team 37
+# IPOS_Group_17
+This is the main repo for Group 17
