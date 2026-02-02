@@ -4,6 +4,7 @@
 
 /.github/          @DCSSchoolAccount
 /README.md         @DCSSchoolAccount
+/docs/             @DCSSchoolAccount
 
 
 # =====================================================
@@ -19,4 +20,4 @@
 # Shared resources (cross-subsystem)
 # =====================================================
 
-/Shared/           @ipos-Group-17/team-37-sa @ipos-Group-17/team-38-ca @ipos-Group-17/team-39-pu
+/shared/           @ipos-Group-17/team-37-sa @ipos-Group-17/team-38-ca @ipos-Group-17/team-39-pu
