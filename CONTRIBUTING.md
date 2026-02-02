@@ -1,96 +1,79 @@
-# Contributing to IPOS Group Project
+# Contributing
 
-This document defines how team members should work in this repository.
-These rules exist to protect subsystem boundaries and ensure clean integration.
-
----
-
-## Branch Rules
-
-- `main`
-  - Stable, integrated, demo-ready branch
-  - No direct pushes allowed
-  - All changes must be merged via Pull Request (PR)
-
-- Subsystem development branches
-  - `team37/sa-dev` – IPOS-SA (Team 37)
-  - `team38/ca-dev` – IPOS-CA (Team 38)
-  - `team39/pu-dev` – IPOS-PU (Team 39)
-
-All development should happen on your team’s branch.
+This repository is split into three subsystem folders. Governance is enforced using a protected `main` branch and CODEOWNERS.
 
 ---
 
-## Folder Ownership
+## Branches
 
-Each subsystem has a dedicated folder:
+### `main`
+- Stable, integrated, demo-ready
+- No direct pushes
+- Pull Requests (PRs) only
+- Approvals required
+- Code Owner review required
 
-- `Team_37_IPOS-SA/` – owned by Team 37
-- `Team_38_IPOS-CA/` – owned by Team 38
-- `Team_39_IPOS-PU/` – owned by Team 39
-
-Ownership is enforced using **CODEOWNERS**.
-
-Do not modify another team’s folder unless explicitly agreed and reviewed.
+### Subsystem development branches
+- `team37/sa-dev` → Team-37 SA (IPOS-SA)
+- `team38/ca-dev` → Team-38 CA (IPOS-CA)
+- `team39/pu-dev` → Team-39 PU (IPOS-PU)
 
 ---
 
-## Shared Folder Rules (`shared/`)
+## Subsystem folders
 
-The `shared/` folder is for:
+- Team-37 SA works in: `Team_37_IPOS-SA/`
+- Team-38 CA works in: `Team_38_IPOS-CA/`
+- Team-39 PU works in: `Team_39_IPOS-PU/`
+
+Do not modify another team’s subsystem folder unless explicitly agreed and reviewed.
+
+---
+
+## Shared folder (`shared/`)
+
+Use `shared/` for:
 - Interface definitions
 - Shared schemas
 - Integration documentation
 
 Rules:
-- Do not place subsystem-specific implementation code here
+- Do not put subsystem implementation code in `shared/`
 - Any change to `shared/` must be communicated to all teams
-- Pull Requests touching `shared/` require cross-team review
+- PRs touching `shared/` require cross-team review (CODEOWNERS)
 
 ---
 
-## Pull Request Rules
+## Pull Requests
 
-All changes must be submitted via Pull Request.
+All changes into `main` must be via PR.
 
 Each PR should:
-- Clearly describe **what changed**
-- Explain **why the change was made**
-- Mention if it affects other subsystems
-- Be as small and focused as possible
+- Describe what changed
+- Explain why it changed
+- Note any cross-subsystem impact
 
-Self-approval is not permitted.
+Self-approval is not permitted (GitHub enforces this).
 
 ---
 
-## Commit Message Guidelines
+## Commit messages
 
-Use clear, descriptive commit messages.
+Use descriptive messages.
 
-Good examples:
-- `Add merchant account suspension logic`
-- `Fix invoice total calculation`
+Good:
+- `Add merchant account state checks`
+- `Fix invoice total rounding`
 - `Document shared catalogue schema`
 
-Avoid vague messages such as:
+Avoid:
 - `update`
 - `fix`
 - `changes`
 
 ---
 
-## Early Solo Development Note
+## Solo development note (early stage)
 
-During early stages, some teams may have only one member.
-
-In this situation:
-- CODEOWNERS may temporarily block self-approval
-- This is expected behaviour
-- Any temporary relaxation of review rules should be deliberate and re-enabled once additional members join
-
----
-
-## Final Note
-
-These rules are part of the project governance model.
-They should not be changed without agreement from all teams and the project maintainer.
+If a team has only one member initially, CODEOWNERS may block self-approval. This is expected.
+Any temporary relaxation of review rules should be minimal and re-enabled once additional members join.
