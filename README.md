@@ -9,20 +9,13 @@ The repository is public to enable enforced governance features (CODEOWNERS and 
 
 ## Repository Structure
 
+- `Team_37_IPOS-SA/` - IPOS-SA (Server/Admin subsystem)
+- `Team_38_IPOS-CA/` - IPOS-CA (Merchant desktop subsystem)
+- `Team_39_IPOS-PU/` - IPOS-PU (Public portal subsystem)
+- `shared/` - shared schemas, interfaces, integration documentation
+- `docs/` - governance and project documentation
+- `.github/` - GitHub config (e.g., CODEOWNERS)
 
-├── Team_37_IPOS-SA/   (IPOS-SA: Server / Admin subsystem)
-
-├── Team_38_IPOS-CA/   (IPOS-CA: Merchant desktop application)
-
-├── Team_39_IPOS-PU/   (IPOS-PU: Public online portal)
-
-├── shared/            (Shared schemas, interfaces, documentation)
-
-├── docs/              (Repo management documentation)
-
-├── .github/           (CODEOWNERS and GitHub configuration)
-
-└── README.md
 
 Each subsystem folder is owned by its respective team.
 Ownership and review responsibility are enforced via CODEOWNERS.
@@ -31,18 +24,18 @@ Ownership and review responsibility are enforced via CODEOWNERS.
 
 ## Branches and Their Purpose
 
-main
+### `main`
 - Stable, demo-ready branch
 - Represents the integrated system
 - No direct pushes allowed
 - All changes must be merged via Pull Request (PR)
 
-Subsystem development branches
-- team37/sa-dev → Team 37 (IPOS-SA)
-- team38/ca-dev → Team 38 (IPOS-CA)
-- team39/pu-dev → Team 39 (IPOS-PU)
+### Subsystem development branches
+- `team37/sa-dev` → Team-37 SA (IPOS-SA)
+- `team38/ca-dev` → Team-38 CA (IPOS-CA)
+- `team39/pu-dev` → Team-39 PU (IPOS-PU)
 
-These are the primary working branches for each team.
+These are the primary working branches for each subsystem team.
 
 ---
 
@@ -54,60 +47,19 @@ Repository governance, ownership boundaries, and review rules are documented in:
 
 ## Rules for Working in This Repository
 
-### 1. Do not push directly to main
-All changes must go through a Pull Request.
-This ensures code review, auditability, and controlled integration.
-
-### 2. Work only in your team’s folder
-Each team must make changes only inside their own subsystem folder and avoid editing other teams’ folders unless explicitly agreed.
-
-Examples:
-- Team 37 works in Team_37_IPOS-SA/
-- Team 38 works in Team_38_IPOS-CA/
-- Team 39 works in Team_39_IPOS-PU/
-
-### 3. Use your team’s development branch
-Normal workflow:
-- Make changes in your local copy
-- Push to your team branch (e.g. team37/sa-dev)
-- Open a Pull Request into main
-
-### 4. CODEOWNERS enforcement (important)
-This repository uses CODEOWNERS to enforce responsibility.
-
-- Changes to a subsystem folder require approval from that subsystem’s team
-- You cannot approve your own Pull Requests
-- Cross-team changes require explicit review by the affected team
-
-This applies even if you are an admin or organization owner.
-
-### 5. Shared folder rules (shared/)
-The shared folder is for:
-- Interface definitions
-- Shared data schemas
-- Integration notes
-- Cross-subsystem documentation
-
-Rules:
-- Do not place subsystem-specific implementation code here
-- Any change to shared should be communicated to all teams
-- Pull Requests touching shared may require multiple approvals
-
-### 6. Commit message expectations
-Use clear, descriptive commit messages that explain what changed and why.
-
-Avoid vague messages such as:
-- update
-- fix
-- changes
-
-### 7. Pull Request expectations
-Every Pull Request should:
-- Clearly state what changed
-- Explain why the change was made
-- Mention if it affects other subsystems
-
-Small, focused Pull Requests are preferred over large ones.
+1. Do not push directly to `main`.
+2. Work on your subsystem branch:
+   - Team-37 SA → `team37/sa-dev`
+   - Team-38 CA → `team38/ca-dev`
+   - Team-39 PU → `team39/pu-dev`
+3. Only modify files inside your subsystem folder:
+   - Team-37 SA → `Team_37_IPOS-SA/`
+   - Team-38 CA → `Team_38_IPOS-CA/`
+   - Team-39 PU → `Team_39_IPOS-PU/`
+4. Any PR that touches another team’s folder requires approval from that team (enforced via CODEOWNERS).
+5. Any PR that touches `shared/` requires cross-team review.
+6. Keep PRs small and focused; explain what changed and why.
+7. Do not commit build output, IDE files, or credentials; these are excluded via `.gitignore`.
 
 ---
 
@@ -127,7 +79,7 @@ Any temporary relaxation should be documented.
 
 ## Governance Summary
 
-- main is protected
+- `main` is protected
 - CODEOWNERS enforces subsystem ownership
 - No one can silently change another team’s code
 - Public visibility is used to enable these controls on GitHub Free
